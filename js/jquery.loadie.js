@@ -35,7 +35,7 @@
     } else {
       updateGUI(parent, percent);
     }
-    if(percent === 1) {
+    if(percent >= 1) {
       setTimeout(function() {
         destroyGUI(parent);
       }, 700);
