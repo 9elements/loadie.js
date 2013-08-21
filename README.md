@@ -11,14 +11,14 @@ If you haven't already, include jQuery and the latest Loadie.js Script on the AJ
 
 Just put in the following jQuery code in your page to initialize Loadie.js.
 
-    $('body').loadie(); <span>// Change the wrapper if wanted.</span>
+    $('body').loadie(); // Change the wrapper if wanted.
 
 ### 2. How to update Loadie.js
 
 If you haven't already, include jQuery and the latest Loadie.js Script on the AJAX-driven page.
 
     var percent = 0.74;
-    $('body').loadie(percent); <span>// Insert your percent as params.</span>
+    $('body').loadie(percent); // Insert your percent as params.
 
 ## **Options**
 
