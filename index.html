@@ -83,6 +83,9 @@
 		}, 352);
 
 		$('#start-loadie').bind('click', function() {
+			if(progress >= 0.9) {
+				$('.loadie').fadeIn();
+			}
 			progress = 0
 			$('body').loadie(progress);
 			setTimeout(function() {
