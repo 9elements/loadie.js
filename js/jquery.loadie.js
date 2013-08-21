@@ -1,3 +1,6 @@
+/**
+ * Loadie.js by 9elements (@sippndipp & @iDuuck)
+ */
 (function( $ ) {
   function uniqueId() {
     var newDate = new Date;
