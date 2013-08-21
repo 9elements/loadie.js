@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loadie</title>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.loadie.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/loadie.css">
+</head>
+<body>
+	<a href="https://github.com/9elements/loadie.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+
+	<div class="container">
+		<h2><b>Loadie.js</b> is a lightweight jQuery plugin to create a preloader that doesn't suck and that is used by big firms.</h2>
+
+		<h3>1. How to include Loadie.js</h3>
+		<p>If you haven't already, include jQuery and the latest Loadie.js Script on the AJAX-driven page.</p>
+		<code>
+			&lt;script src="http://code.jquery.com/jquery-latest.min.js"><br>
+			&lt;script src="http://code.loadie.com/loadie-latest.min.js">
+		</code>
+
+		<h3>2. How to initialize Loadie.js</h3>
+		<p>Just put in the following jQuery code in your page to initialize Loadie.js.</p>
+		<code>
+			$('body').loadie(); <span>// Change the wrapper if wanted.</span>
+		</code>
+
+		<h3>2. How to update Loadie.js</h3>
+		<p>If you haven't already, include jQuery and the latest Loadie.js Script on the AJAX-driven page.</p>
+		<code>
+			var percent = 0.74;<br>
+			$('body').loadie(percent); <span>// Insert your percent as params.</span>
+		</code>
+
+		<h2><b>Options</b></h2>
+
+		<p>At this moment Loadie.js (v1.0) doesn't support extensive options. If you have any ideas what Loadie.js could be, just leave us an issue at Github.</p>
+
+		<br>
+
+		<h3>License</h3>
+
+		<p>The MIT License (MIT)</p>
+
+		<p>Copyright (c) 2013 Victor Bjelkholm</p>
+
+		<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+		of this software and associated documentation files (the "Software"), to deal
+		in the Software without restriction, including without limitation the rights
+		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+		copies of the Software, and to permit persons to whom the Software is
+		furnished to do so, subject to the following conditions:</p>
+
+		<p>The above copyright notice and this permission notice shall be included in
+		all copies or substantial portions of the Software.</p>
+
+		<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+		THE SOFTWARE.</p>
+	</div>
+
+	<script>
+	$(function() {
+
+		var totalImages = $(".loaded-image").size();
+		var imagesLoaded = 0;
+		$('body').loadie();
+		$(".loaded-image").bind("load", function(){
+        $(this).show();
+
+        imagesLoaded++;
+        //$('body').loadie(imagesLoaded / totalImages);
+    });
+
+		setTimeout(function() {
+			$('body').loadie(0.2);
+		}, 352);
+		setTimeout(function() {
+			$('body').loadie(0.42);
+		}, 702);
+		setTimeout(function() {
+			$('body').loadie(1.00000);
+		}, 1042);
+	})
+	</script>
+</body>
+</html>
