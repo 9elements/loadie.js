@@ -1,1 +1,69 @@
-body{display:table;width:100%;margin:0;padding:100px 0px;color:#a92a00;background:#ff7d52;-webkit-font-smoothing:antialiased;font:18px/20px "Helvetica Neue",Helvetica,Arial,Sans-serif}h1,h2,h3,h4,h5,h6{font-weight:normal}a{color:#fff;text-shadow:0px 1px 0px rgba(0,0,0,0.15);text-decoration:none}.button{padding:10px 20px;border:3px solid #fff}.container{width:720px;margin:0 auto;text-align:left}.container h2{font-size:36px;line-height:50px;font-weight:200}.container h2 b{font-weight:700;color:#fff;text-shadow:0px 1px 0px rgba(0,0,0,0.15)}.container h3{font-weight:600;color:#fff;text-shadow:0px 1px 0px rgba(0,0,0,0.15);margin-top:50px;font-size:24px}.container p{font-size:20px;line-height:36px}.container code{display:block;padding:15px 20px;background:#d24e23;font-family:"Ubuntu Mono";color:#fff;line-height:30px;text-shadow:0px 1px 0px rgba(0,0,0,0.25);border-radius:4px;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.15),0px 1px 0px rgba(255,255,255,0.15)}.container code span{opacity:0.75}
+body {
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 100px 0px;
+  color: #a92a00;
+  background: #ff7d52;
+  -webkit-font-smoothing: antialiased;
+  font: 18px/20px "Helvetica Neue", Helvetica, Arial, Sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+a {
+  color: white;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+  text-decoration: none; }
+
+.actions {
+  text-align: center; }
+.actions .button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 3px solid white;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+.actions .button:hover {
+  background: white;
+  color: #ff7243;
+  text-shadow: 0px 0px 0px transparent !important; }
+
+.container {
+  width: 720px;
+  margin: 0 auto;
+  text-align: left; }
+.container h2 {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 200; }
+.container h2 b {
+  font-weight: 700;
+  color: white;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15); }
+.container h3 {
+  font-weight: 600;
+  color: white;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 50px;
+  font-size: 24px; }
+.container p {
+  font-size: 20px;
+  line-height: 36px; }
+.container code {
+  display: block;
+  padding: 15px 20px;
+  background: #d24e23;
+  font-family: "Ubuntu Mono";
+  color: white;
+  line-height: 30px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.15); }
+.container code span {
+  opacity: 0.75; }

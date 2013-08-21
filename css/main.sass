@@ -17,9 +17,25 @@ a
 	text-shadow: 0px 1px 0px rgba(0,0,0,0.15)
 	text-decoration: none
 
-.button
-	padding: 10px 20px
-	border: 3px solid white
+.actions
+	text-align: center
+	.button
+		display: inline-block
+
+		padding: 10px 20px
+		font-weight: bold
+		font-size: 16px
+		border: 3px solid white
+		border-radius: 3px
+		-webkit-transition: all .2s linear
+		-moz-transition: all .2s linear
+		-o-transition: all .2s linear
+		transition: all .2s linear
+
+		&:hover
+			background: white
+			color: $color
+			text-shadow: 0px 0px 0px transparent !important
 
 .container
 	width: 720px

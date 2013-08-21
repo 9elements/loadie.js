@@ -15,6 +15,13 @@
 	<div class="container">
 		<h2><b>Loadie.js</b> is a lightweight jQuery plugin to create a preloader that doesn't suck and that is used by big firms.</h2>
 
+		<div class="actions">
+			<a href="#" id="start-loadie" class="button third">Start</a>
+			<a href="#" id="progress-loadie" class="button third">Add progress</a>
+			<a href="#" id="finish-loadie" class="button third">Finish</a>
+		</div>
+
+
 		<h3>1. How to include Loadie.js</h3>
 		<p>If you haven't already, include jQuery and the latest Loadie.js Script on the AJAX-driven page.</p>
 		<code>
@@ -68,26 +75,37 @@
 
 	<script>
 	$(function() {
-
-		var totalImages = $(".loaded-image").size();
-		var imagesLoaded = 0;
 		$('body').loadie();
-		$(".loaded-image").bind("load", function(){
-        $(this).show();
 
-        imagesLoaded++;
-        //$('body').loadie(imagesLoaded / totalImages);
-    });
-
+    var progress = 0.2
 		setTimeout(function() {
-			$('body').loadie(0.2);
+			$('body').loadie(progress);
 		}, 352);
-		setTimeout(function() {
-			$('body').loadie(0.42);
-		}, 702);
-		setTimeout(function() {
-			$('body').loadie(1.00000);
-		}, 1042);
+
+		$('#start-loadie').bind('click', function() {
+			progress = 0
+			$('body').loadie(progress);
+			setTimeout(function() {
+				progress = 0.1;
+				$('body').loadie(progress);
+				console.log('Restarted -'+progress);
+			}, 600)
+		});
+		$('#progress-loadie').bind('click', function() {
+			if(progress <= 0.9) {
+				progress += 0.1;
+			} else
+			{
+				$('.loadie').fadeOut();
+			}
+			console.log('Increased by 0.1 - Is now '+progress);
+			$('body').loadie(progress);
+		});
+		$('#finish-loadie').bind('click', function() {
+			progress = 1
+			console.log('Finished the Loadie - '+progress);
+			$('body').loadie(progress);
+		});
 	})
 	</script>
 </body>
