@@ -80,7 +80,7 @@
     var progress = 0.2
 		setTimeout(function() {
 			$('body').loadie(progress);
-		}, 352);
+		}, 300);
 
 		$('#start-loadie').bind('click', function() {
 			if(progress >= 0.9) {
@@ -95,12 +95,7 @@
 			}, 600)
 		});
 		$('#progress-loadie').bind('click', function() {
-			if(progress <= 0.9) {
-				progress += 0.1;
-			} else
-			{
-				$('.loadie').fadeOut();
-			}
+			progress += 0.1;
 			console.log('Increased by 0.1 - Is now '+progress);
 			$('body').loadie(progress);
 		});
