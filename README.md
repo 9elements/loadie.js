@@ -26,4 +26,4 @@ At this moment Loadie.js (v1.0) doesn't support extensive options. If you have a
 
 ##Copyright
 
-This nice little jQuery plugin was crafted by [@iDuuck](http://twitter.com/iDuuck) and [@sippndipp](https://twitter.com/sippndipp) of [9elements](http://9elements.com).
+This nice little jQuery plugin was crafted by [@iDuuck](http://twitter.com/iDuuck) of [9elements](http://9elements.com).
