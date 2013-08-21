@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loadie - Example Page</title>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.loadie.js"></script>
+	<link rel="stylesheet" href="css/loadie.css">
+	<style>body{margin:0px}</style>
+</head>
+<body>
+	<a href="https://github.com/9elements/loadie.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+	<img src="img/1.jpg" class="loaded-image" alt="">
+	<img src="img/2.jpg" class="loaded-image" alt="">
+	<img src="img/3.jpg" class="loaded-image" alt="">
+
+	<script>
+	$(function() {
+		var totalImages = $(".loaded-image").size();
+		var imagesLoaded = 0;
+		$('body').loadie();
+		$(".loaded-image").bind("load", function(){
+      $(this).show();
+
+      imagesLoaded++;
+      $('body').loadie(imagesLoaded / totalImages);
+    });
+	})
+	</script>
+</body>
+</html>
