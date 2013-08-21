@@ -5,7 +5,7 @@
 If you haven't already, include jQuery and the latest Loadie.js Script on the AJAX-driven page.
 
     <script src="http://code.jquery.com/jquery-latest.min.js">
-    <script src="http://code.loadie.com/loadie-latest.min.js">
+    <script src="js/jquery.loadie.min.js">
 
 ### 2. How to initialize Loadie.js
 
