@@ -22,9 +22,6 @@
 			<a href="#" id="start-loadie" class="button">Start</a>
 			<a href="#" id="progress-loadie" class="button">Add progress</a>
 			<a href="#" id="finish-loadie" class="button">Finish</a>
-		</div>
-
-		<div class="centered">
 			<a href="https://github.com/9elements/loadie.js" target="_blank" class="button full">Download</a>
 		</div>
 
@@ -110,17 +107,17 @@
 			setTimeout(function() {
 				progress = 0.1;
 				$('body').loadie(progress);
-				console.log('Restarted -'+progress);
+				// console.log('Restarted -'+progress);
 			}, 600)
 		});
 		$('#progress-loadie').bind('click', function() {
-			progress += 0.1;
-			console.log('Increased by 0.1 - Is now '+progress);
+			progress += 0.13;
+			// console.log('Increased by 0.1 - Is now '+progress);
 			$('body').loadie(progress);
 		});
 		$('#finish-loadie').bind('click', function() {
 			progress = 1
-			console.log('Finished the Loadie - '+progress);
+			// console.log('Finished the Loadie - '+progress);
 			$('body').loadie(progress);
 		});
 	})
