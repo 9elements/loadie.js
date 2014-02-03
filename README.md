@@ -13,12 +13,20 @@ Just put in the following jQuery code in your page to initialize Loadie.js.
 
     $('body').loadie(); // Change the wrapper if wanted.
 
-### 2. How to update Loadie.js
+### 3. How to update Loadie.js
 
 If you haven't already, include jQuery and the latest Loadie.js Script on the AJAX-driven page.
 
     var percent = 0.74;
     $('body').loadie(percent); // Insert your percent as params.
+
+### 4. Update your CSS files
+
+If you are running a web page with a fixed header or something fixed or positioned absolute on the top, your loadie will not be visible, because there is something that is called z-index.
+
+    .loadie { z-index: 9999; }
+
+Insert this little snippet into your css file and everything should work fine.
 
 ## **Options**
 
