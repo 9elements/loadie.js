@@ -32,6 +32,6 @@ Insert this little snippet into your css file and everything should work fine.
 
 At this moment Loadie.js (v1.0) doesn't support extensive options. If you have any ideas what Loadie.js could be, just leave us an issue at Github.
 
-##Copyright
+## Copyright
 
 This nice little jQuery plugin was crafted by [@iDuuck](http://twitter.com/iDuuck) of [9elements](http://9elements.com).
