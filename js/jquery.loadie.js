@@ -14,7 +14,9 @@
    */
   Loadie.finish = function(dom) {
     var loadie = $('#loadie-' + dom.data('loadie-id'), dom);
-    loadie.fadeOut(200);
+    loadie.fadeOut(200,function(){
+        loadie.css('width',"0px");   
+    });
   }
 
   /*
@@ -43,16 +45,16 @@
   $.fn.loadie = function(percent, callback) {
     var percent = percent || 0;
     var parent = $(this);
+    if(percent >= 1) {
+      setTimeout(function() {
+        Loadie.finish(parent);
+      }, 200);
+    }
 
     if(parent.data('loadie-loaded') !== 1) {
       Loadie.init(parent, percent);
     } else {
       Loadie.update(parent, percent);
-    }
-    if(percent >= 1) {
-      setTimeout(function() {
-        Loadie.finish(parent);
-      }, 200);
     }
     parent.data('loadie-loaded', 1);
     return this;
